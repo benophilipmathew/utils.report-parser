@@ -18,6 +18,8 @@ namespace ReportParser.View
             InitializeComponent();
         }
 
+        #region Action Events
+
         private void pdfDropzone_Drop(object sender, System.Windows.DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -61,5 +63,23 @@ namespace ReportParser.View
             }
 
         }
+
+        #endregion
+
+        #region Style Events
+
+        private void pdfDropzone_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            innerB.Style = this.FindResource("DropzoneInnerB_MouseEnter") as Style;
+            outerB.Style = this.FindResource("DropzoneOuterB_MouseEnter") as Style;
+        }
+
+        private void pdfDropzone_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            innerB.Style = this.FindResource("DropzoneInnerB_MouseLeave") as Style;
+            outerB.Style = this.FindResource("DropzoneOuterB_MouseLeave") as Style;
+        }
+
+        #endregion        
     }
 }

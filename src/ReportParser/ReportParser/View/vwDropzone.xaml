@@ -7,9 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="155" d:DesignWidth="190">
     <Grid>
-        <Border x:Name="pdfDropzone" Style="{StaticResource DropzoneB}" AllowDrop="True" Drop="pdfDropzone_Drop" MouseLeftButtonDown="pdfDropzone_MouseLeftButtonDown">
-            <Border Style="{StaticResource DropzoneInnerB}">
-                <Border Style="{StaticResource DropzoneInnerB2}">
+        <Border x:Name="pdfDropzone" Style="{StaticResource DropzoneB}"
+                AllowDrop="True"
+                Drop="pdfDropzone_Drop" 
+                MouseLeftButtonDown="pdfDropzone_MouseLeftButtonDown"
+                MouseEnter="pdfDropzone_MouseEnter"
+                MouseLeave="pdfDropzone_MouseLeave">
+            <Border x:Name="outerB" Style="{StaticResource DropzoneOuterB_MouseLeave}">
+                <Border x:Name="innerB" Style="{StaticResource DropzoneInnerB_MouseLeave}">
                     <Rectangle Style="{StaticResource PDFLogoR}">
                         <Rectangle.OpacityMask>
                             <VisualBrush Visual="{StaticResource appbar_page_pdf}" Stretch="Fill" />

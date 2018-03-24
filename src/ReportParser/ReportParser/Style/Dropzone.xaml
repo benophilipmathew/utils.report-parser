@@ -9,8 +9,8 @@
         <Setter Property="CornerRadius" Value="3" />
         <Setter Property="BorderThickness" Value="1" />
     </Style>
-    
-    <Style x:Key="DropzoneInnerB" TargetType="Border">
+
+    <Style x:Key="DropzoneOuterB_Main" TargetType="Border">
         <Setter Property="Opacity" Value="0.4" />
         <Setter Property="Background" Value="{StaticResource PrimaryDarkCB}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
@@ -19,12 +19,30 @@
         <Setter Property="BorderThickness" Value="1" />
     </Style>
 
-    <Style x:Key="DropzoneInnerB2" TargetType="Border">
-        <Setter Property="Background" Value="{StaticResource PrimaryLightCB}" />
+    <Style x:Key="DropzoneOuterB_MouseEnter" TargetType="Border" BasedOn="{StaticResource DropzoneOuterB_Main}">
+        <Setter Property="Background" Value="{StaticResource SecondaryDarkCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryDarkCB}" />
+    </Style>
+
+    <Style x:Key="DropzoneOuterB_MouseLeave" TargetType="Border" BasedOn="{StaticResource DropzoneOuterB_Main}">
+        <Setter Property="Background" Value="{StaticResource PrimaryDarkCB}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
+    </Style>
+
+    <Style x:Key="DropzoneInnerB_Main" TargetType="Border">
         <Setter Property="Margin" Value="0" />
         <Setter Property="CornerRadius" Value="100 10 100 10" />
         <Setter Property="BorderThickness" Value="5, 1, 5, 1" />
+    </Style>
+
+    <Style x:Key="DropzoneInnerB_MouseEnter" TargetType="Border" BasedOn="{StaticResource DropzoneInnerB_Main}">
+        <Setter Property="Background" Value="{StaticResource SecondaryLightCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryDarkCB}" />
+    </Style>
+
+    <Style x:Key="DropzoneInnerB_MouseLeave" TargetType="Border" BasedOn="{StaticResource DropzoneInnerB_Main}">
+        <Setter Property="Background" Value="{StaticResource PrimaryLightCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
     </Style>
 
     <Style x:Key="PDFLogoR" TargetType="Rectangle">
