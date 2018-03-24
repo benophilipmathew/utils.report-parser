@@ -181,26 +181,46 @@ namespace ReportParser.Classes
 
         private string GetTempFolderPath()
         {
-            if (!Directory.Exists(Constant.TempRootPath))
-                Directory.CreateDirectory(Constant.TempRootPath);
+            string path = string.Empty;
 
-            string tempFolderPath = Constant.TempRootPath + Constant.TempFolderPrefix + DateTime.Now.ToFileTime().ToString();
-            if (!Directory.Exists(tempFolderPath))
-                Directory.CreateDirectory(tempFolderPath);
+            try
+            {
+                if (!Directory.Exists(Constant.TempRootPath))
+                    Directory.CreateDirectory(Constant.TempRootPath);
 
-            return tempFolderPath + @"\";
+                string tempFolderPath = Constant.TempRootPath + Constant.TempFolderPrefix + DateTime.Now.ToFileTime().ToString();
+                if (!Directory.Exists(tempFolderPath))
+                    Directory.CreateDirectory(tempFolderPath);
+
+                path = tempFolderPath + @"\";
+            }
+            catch (Exception ex)
+            {
+                LogError(this.GetType().Name, MethodBase.GetCurrentMethod().Name, ex);
+                throw;
+            }
+            
+            return path;
         }
 
         private DataTable GenerateTableSchema(string tableName = null)
         {
             DataTable dt = new DataTable();
 
-            if (!string.IsNullOrWhiteSpace(tableName))
-                dt.TableName = tableName;
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(tableName))
+                    dt.TableName = tableName;
 
-            dt.Columns.Add("IP");
-            dt.Columns.Add("Traffic");
-            dt.Columns.Add("TrafficPerc");
+                dt.Columns.Add("IP");
+                dt.Columns.Add("Traffic");
+                dt.Columns.Add("TrafficPerc");
+            }
+            catch (Exception ex)
+            {
+                LogError(this.GetType().Name, MethodBase.GetCurrentMethod().Name, ex);
+                throw;
+            }
 
             return dt;
         }
@@ -208,24 +228,32 @@ namespace ReportParser.Classes
         bool isHeaderRowPassed = true;
         private void TrackColumnHeaderIndex(string innerText, int i)
         {
-            switch (innerText.Trim())
+            try
             {
-                case "SourceIN": siIpColumnIndex = i; break;
-                case "SourceOUT":
-                    {
-                        isHeaderRowPassed = true;
-                        soIpColumnIndex = i;
-                    };
-                    break;
-                case "Total":
-                    {
-                        if (isHeaderRowPassed)
+                switch (innerText.Trim())
+                {
+                    case "SourceIN": siIpColumnIndex = i; break;
+                    case "SourceOUT":
                         {
-                            endRowIndex = i;
-                            isHeaderRowPassed = false;
+                            isHeaderRowPassed = true;
+                            soIpColumnIndex = i;
+                        };
+                        break;
+                    case "Total":
+                        {
+                            if (isHeaderRowPassed)
+                            {
+                                endRowIndex = i;
+                                isHeaderRowPassed = false;
+                            }
                         }
-                    }
-                    break;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError(this.GetType().Name, MethodBase.GetCurrentMethod().Name, ex);
+                throw;
             }
         }
 

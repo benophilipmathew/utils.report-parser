@@ -12,7 +12,9 @@
                 Drop="pdfDropzone_Drop" 
                 MouseLeftButtonDown="pdfDropzone_MouseLeftButtonDown"
                 MouseEnter="pdfDropzone_MouseEnter"
-                MouseLeave="pdfDropzone_MouseLeave">
+                MouseLeave="pdfDropzone_MouseLeave"
+                DragDrop.DragEnter="pdfDropzone_DragEnter"
+                DragDrop.DragLeave="pdfDropzone_DragLeave">
             <Border x:Name="outerB" Style="{StaticResource DropzoneOuterB_MouseLeave}">
                 <Border x:Name="innerB" Style="{StaticResource DropzoneInnerB_MouseLeave}">
                     <Rectangle Style="{StaticResource PDFLogoR}">

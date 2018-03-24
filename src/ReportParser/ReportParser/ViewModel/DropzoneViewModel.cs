@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace ReportParser.ViewModel
             set
             {
                 inputFilePath = value;
-                PropertyChange("InputFilePath");
+                PropertyChange();
             }
         }
 
@@ -63,21 +64,21 @@ namespace ReportParser.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void PropertyChange(string propertyName)
+        private void PropertyChange([CallerMemberName] string property = "")
         {
-            if (propertyName == "InputFilePath")
+            if (property == "InputFilePath")
             {
                 StartParsing();
             }
 
-            OnPropertyChanged(propertyName);
+            OnPropertyChanged(property);
         }
 
-        protected void OnPropertyChanged(string propertyName)
+        protected void OnPropertyChanged(string property)
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
 

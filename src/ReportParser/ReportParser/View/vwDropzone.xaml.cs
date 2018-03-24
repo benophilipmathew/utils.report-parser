@@ -70,16 +70,39 @@ namespace ReportParser.View
 
         private void pdfDropzone_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            innerB.Style = this.FindResource("DropzoneInnerB_MouseEnter") as Style;
-            outerB.Style = this.FindResource("DropzoneOuterB_MouseEnter") as Style;
+            DropzoneEffect(true);
         }
 
         private void pdfDropzone_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            innerB.Style = this.FindResource("DropzoneInnerB_MouseLeave") as Style;
-            outerB.Style = this.FindResource("DropzoneOuterB_MouseLeave") as Style;
+            DropzoneEffect(false);
         }
 
-        #endregion        
+        private void pdfDropzone_DragEnter(object sender, DragEventArgs e)
+        {
+            DropzoneEffect(true);
+        }
+
+        private void pdfDropzone_DragLeave(object sender, DragEventArgs e)
+        {
+            DropzoneEffect(false);
+        }
+
+        #endregion
+
+        // Drop zone effect on/off method
+        private void DropzoneEffect(bool isOn)
+        {
+            if (isOn)
+            {
+                innerB.Style = this.FindResource("DropzoneInnerB_MouseEnter") as Style;
+                outerB.Style = this.FindResource("DropzoneOuterB_MouseEnter") as Style;
+            }
+            else
+            {
+                innerB.Style = this.FindResource("DropzoneInnerB_MouseLeave") as Style;
+                outerB.Style = this.FindResource("DropzoneOuterB_MouseLeave") as Style;
+            }
+        }
     }
 }
