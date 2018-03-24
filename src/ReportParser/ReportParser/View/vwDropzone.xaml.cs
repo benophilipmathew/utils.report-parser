@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using ReportParser.Classes;
 using ReportParser.ViewModel;
 using System.IO;
 using System.Linq;
@@ -29,6 +30,9 @@ namespace ReportParser.View
                     if (vm != null)
                     {
                         vm.InputFilePath = inputPath;
+
+                        if (Constant.IsAutoCloseOn)
+                            Application.Current.Shutdown();
                     }
                 }
             }
@@ -50,10 +54,12 @@ namespace ReportParser.View
                 if (vm != null)
                 {
                     vm.InputFilePath = fileDialog.FileName;
+
+                    if (Constant.IsAutoCloseOn)
+                        Application.Current.Shutdown();
                 }
             }
 
-            Application.Current.Shutdown();
         }
     }
 }

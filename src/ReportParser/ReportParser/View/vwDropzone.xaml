@@ -10,9 +10,14 @@
         <Border x:Name="pdfDropzone" Style="{StaticResource DropzoneB}" AllowDrop="True" Drop="pdfDropzone_Drop" MouseLeftButtonDown="pdfDropzone_MouseLeftButtonDown">
             <Border Style="{StaticResource DropzoneInnerB}">
                 <Border Style="{StaticResource DropzoneInnerB2}">
-
+                    <Rectangle Style="{StaticResource PDFLogoR}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Visual="{StaticResource appbar_page_pdf}" Stretch="Fill" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
                 </Border>
             </Border>
         </Border>
+        <TextBlock Text="Drop/Select PDF" Style="{StaticResource DropzoneBottomTxt}" />
     </Grid>
 </UserControl>

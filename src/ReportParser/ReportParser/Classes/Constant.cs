@@ -9,7 +9,10 @@ namespace ReportParser.Classes
 
         public static readonly int ExcelStartRow =
             int.Parse(ConfigurationManager.AppSettings["ExcelStartRow"].ToString());
-        
+
+        public static readonly bool IsAutoCloseOn =
+            bool.Parse(ConfigurationManager.AppSettings["AutoCloseAfterPrasing"].ToString());
+
         public static readonly string TempFolderPrefix = ConfigurationManager.AppSettings["TempFolderPrefix"].ToString();
 
         public static readonly string TempRootPath = ConfigurationManager.AppSettings["TempRootPath"].ToString();        
