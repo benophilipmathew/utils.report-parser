@@ -1,0 +1,38 @@
+﻿<Application x:Class="ReportParser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Metro Default Styles -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatSlider.xaml" />
+
+                <!-- Metro Icons -->
+                <ResourceDictionary Source="/ReportParser;component/Resources/Icons.xaml" />
+
+                <!-- Theme -->
+                <ResourceDictionary Source="/ReportParser;component/Style/DefaultSkin.xaml" />
+                
+                <!-- Metro Customization -->
+                <ResourceDictionary Source="/ReportParser;component/Style/CustomMetro.xaml" />
+
+                <!-- Main Window -->
+                <ResourceDictionary Source="/ReportParser;component/Style/MainWindow.xaml" />
+
+                <!-- Dropzone -->
+                <ResourceDictionary Source="/ReportParser;component/Style/Dropzone.xaml" />
+
+                <!-- Footer -->
+                <ResourceDictionary Source="/ReportParser;component/Style/Footer.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

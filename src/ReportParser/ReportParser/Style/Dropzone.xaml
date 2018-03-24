@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style x:Key="DropzoneB" TargetType="Border">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Margin" Value="10px 10px 10px 5px" />
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+    
+    <Style x:Key="DropzoneInnerB" TargetType="Border">
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="Background" Value="{StaticResource WhiteCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
+        <Setter Property="Margin" Value="20px 10px 20px 10px" />
+        <Setter Property="CornerRadius" Value="100 100 100 100" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style x:Key="DropzoneInnerB2" TargetType="Border">
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="Background" Value="{StaticResource PrimaryDarkCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="CornerRadius" Value="80 10 80 10" />
+        <Setter Property="BorderThickness" Value="1, 2, 1, 3" />
+    </Style>
+
+</ResourceDictionary>

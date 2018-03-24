@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ReportParser.Style">
+
+    <!-- APPLICATION COLORS -->
+    <Color x:Key="WhiteC">#FFFFFF</Color>
+    <Color x:Key="PrimaryLightC">#F0F3F8</Color>
+    <Color x:Key="PrimaryDarkC">#547DBF</Color>
+    <Color x:Key="SecondaryLightC">#F4E4BD</Color>
+    <Color x:Key="SecondaryDarkC">#C0AD7E</Color>
+
+    <!-- APPLICATION COLORS BRUSH -->
+    <SolidColorBrush x:Key="WhiteCB" Color="{StaticResource WhiteC}" />
+    <SolidColorBrush x:Key="PrimaryLightCB" Color="{StaticResource PrimaryLightC}" />
+    <SolidColorBrush x:Key="PrimaryDarkCB" Color="{StaticResource PrimaryDarkC}" />
+    <SolidColorBrush x:Key="SecondaryLightCB" Color="{StaticResource SecondaryLightC}" />
+    <SolidColorBrush x:Key="SecondaryDarkCB" Color="{StaticResource SecondaryDarkC}" />
+    
+    <!-- METRO COLORS -->
+    <DynamicResource x:Key="HighlightColor" ResourceKey="WhiteCB"/>
+    <DynamicResource x:Key="AccentBaseColor" ResourceKey="PrimaryDarkC"/>
+    <DynamicResource x:Key="AccentColor" ResourceKey="PrimaryLightC"/>
+    <DynamicResource x:Key="AccentColor2" ResourceKey="PrimaryLightC"/>
+    <DynamicResource x:Key="AccentColor3" ResourceKey="PrimaryLightC"/>
+    <DynamicResource x:Key="AccentColor4" ResourceKey="PrimaryLightC"/>
+    <DynamicResource x:Key="IdealForegroundColor" ResourceKey="PrimaryDarkC"/>
+
+</ResourceDictionary>

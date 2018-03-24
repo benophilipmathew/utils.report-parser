@@ -1,0 +1,19 @@
+﻿<controls:MetroWindow x:Class="ReportParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:view="clr-namespace:ReportParser.View"
+        Title="Dropzone" Height="250" Width="200"
+        Style="{StaticResource MainWindowStyle}"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="{StaticResource MainWindowBorderThickness}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="65px" />
+        </Grid.RowDefinitions>
+        
+        <view:vwDropzone Grid.Row="0" DataContext="{Binding DropzoneVM, Mode=TwoWay}" />
+        <view:vwFooter Grid.Row="2" DataContext="{Binding FooterVM, Mode=OneTime}" />        
+    </Grid>
+</controls:MetroWindow>
