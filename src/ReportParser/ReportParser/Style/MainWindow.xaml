@@ -3,9 +3,9 @@
                     xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls">
     
     <Style x:Key="MainWindowStyle" TargetType="controls:MetroWindow">
-        <Setter Property="WindowTitleBrush" Value="{StaticResource PrimaryLightCB}" />
+        <Setter Property="WindowTitleBrush" Value="{StaticResource WhiteCB}" />
         <Setter Property="TitleForeground" Value="{StaticResource SecondaryDarkCB}" />
-        <Setter Property="Background" Value="{StaticResource PrimaryLightCB}" />
+        <Setter Property="Background" Value="{StaticResource WhiteCB}" />
         <Setter Property="GlowBrush" Value="{StaticResource SecondaryLightCB}" />
         <Setter Property="Padding" Value="10" />
     </Style>

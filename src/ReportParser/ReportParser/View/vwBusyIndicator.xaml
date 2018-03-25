@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ReportParser.View.vwBusyIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="200">
+    <Grid Visibility="{Binding IsVisible, Mode=Twoway}">
+        <Border Style="{StaticResource BIOverlay}" />
+        <controls:ProgressRing Style="{StaticResource ProgressRing}" />
+        <TextBlock Grid.Row="0" Style="{StaticResource ProgressDetail}"
+                       Text="{Binding ProgressDetail, Mode=TwoWay}"/>
+    </Grid>
+</UserControl>

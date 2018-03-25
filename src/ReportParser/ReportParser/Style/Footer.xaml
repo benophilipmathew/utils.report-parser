@@ -5,22 +5,24 @@
         <Setter Property="Width" Value="50" />
         <Setter Property="CornerRadius" Value="50 25 50 20" />
         <Setter Property="Background" Value="{StaticResource PrimaryLightCB}" />
-        <Setter Property="BorderBrush" Value="{StaticResource SecondaryDarkCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
         <Setter Property="BorderThickness" Value="1, 2, 1, 3" />
         <Setter Property="VerticalAlignment" Value="Bottom" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="Margin" Value="5px, 0, 0, 5px" />
         <Setter Property="Padding" Value="8px" />
+        <Setter Property="Opacity" Value="0.4" />
     </Style>
     
     <Style x:Key="FooterTextB" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource PrimaryLightCB}" />
-        <Setter Property="BorderBrush" Value="{StaticResource SecondaryDarkCB}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkCB}" />
         <Setter Property="BorderThickness" Value="0, 1, 1px, 3px" />
         <Setter Property="VerticalAlignment" Value="Bottom" />
         <Setter Property="Margin" Value="25,0,10,8" />
         <Setter Property="CornerRadius" Value="35 3 3 0" />
         <Setter Property="Padding" Value="50px 0 8px 2px" />
+        <Setter Property="Opacity" Value="0.4" />
     </Style>
     
     <Style x:Key="FooterText" TargetType="TextBlock">

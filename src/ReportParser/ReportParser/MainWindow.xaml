@@ -14,6 +14,23 @@
         </Grid.RowDefinitions>
         
         <view:vwDropzone Grid.Row="0" DataContext="{Binding DropzoneVM, Mode=TwoWay}" />
-        <view:vwFooter Grid.Row="2" DataContext="{Binding FooterVM, Mode=OneTime}" />        
+        <view:vwFooter Grid.Row="2" DataContext="{Binding FooterVM, Mode=OneTime}" />
+
+        <view:vwBusyIndicator Grid.Row="0" Grid.RowSpan="2" DataContext="{Binding bi, Mode=TwoWay}" />
+
+        <!--<Grid Grid.Row="0" Grid.RowSpan="2" Visibility="{Binding IsVisible, Mode=Twoway}">
+            <Border Background="{StaticResource SecondaryLightCB}" Opacity="0.8" />
+            <controls:ProgressRing Foreground="{DynamicResource SecondaryLightCB}" Margin="10" Width="180" Height="230"/>
+            <TextBlock Grid.Row="0" 
+                       Text="{Binding ProcessingDetail, Mode=TwoWay, NotifyOnSourceUpdated=True}"
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Bottom" 
+                       Margin="15px 0 0 30px" 
+                       FontSize="12px"
+                       FontFamily="calibri" 
+                       FontStyle="Italic"
+                       Foreground="{StaticResource SecondaryDarkCB}"
+                       Opacity="0.8"/>
+        </Grid>-->
     </Grid>
 </controls:MetroWindow>

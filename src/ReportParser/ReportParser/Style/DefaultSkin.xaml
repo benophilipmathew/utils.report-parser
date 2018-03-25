@@ -6,8 +6,8 @@
     <Color x:Key="WhiteC">#FFFFFF</Color>
     <Color x:Key="PrimaryLightC">#F0F3F8</Color>
     <Color x:Key="PrimaryDarkC">#547DBF</Color>
-    <Color x:Key="SecondaryLightC">#F4E4BD</Color>
-    <Color x:Key="SecondaryDarkC">#C0AD7E</Color>
+    <Color x:Key="SecondaryLightC">#EBD9D9</Color>
+    <Color x:Key="SecondaryDarkC">#8E3434</Color>
 
     <!-- APPLICATION COLORS BRUSH -->
     <SolidColorBrush x:Key="WhiteCB" Color="{StaticResource WhiteC}" />

@@ -20,7 +20,7 @@ namespace ReportParser.View
 
         #region Action Events
 
-        private void pdfDropzone_Drop(object sender, System.Windows.DragEventArgs e)
+        private void pdfDropzone_Drop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -61,7 +61,6 @@ namespace ReportParser.View
                         Application.Current.Shutdown();
                 }
             }
-
         }
 
         #endregion

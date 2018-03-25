@@ -16,21 +16,18 @@
 
                 <!-- Metro Icons -->
                 <ResourceDictionary Source="/ReportParser;component/Resources/Icons.xaml" />
-
                 <!-- Theme -->
-                <ResourceDictionary Source="/ReportParser;component/Style/DefaultSkin.xaml" />
-                
+                <ResourceDictionary Source="/ReportParser;component/Style/DefaultSkin.xaml" />                
                 <!-- Metro Customization -->
                 <ResourceDictionary Source="/ReportParser;component/Style/CustomMetro.xaml" />
-
                 <!-- Main Window -->
                 <ResourceDictionary Source="/ReportParser;component/Style/MainWindow.xaml" />
-
                 <!-- Dropzone -->
                 <ResourceDictionary Source="/ReportParser;component/Style/Dropzone.xaml" />
-
                 <!-- Footer -->
                 <ResourceDictionary Source="/ReportParser;component/Style/Footer.xaml" />
+                <!-- Busy Indicator -->
+                <ResourceDictionary Source="/ReportParser;component/Style/BusyIndicator.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

@@ -1,6 +1,5 @@
 ﻿using MahApps.Metro.Controls;
 using ReportParser.ViewModel;
-using System.Windows;
 
 namespace ReportParser
 {
@@ -12,8 +11,7 @@ namespace ReportParser
         public MainWindow()
         {
             InitializeComponent();
-
-            this.DataContext = new MainViewModel();
+            this.DataContext = new MasterViewModel();
         }
     }
 }
