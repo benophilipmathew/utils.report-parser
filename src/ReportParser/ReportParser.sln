@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportParser", "ReportParser\ReportParser.csproj", "{F48554E5-C9C3-40D8-A3B6-99927A662F9F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ReportParserSetup", "..\ReportParserSetup\ReportParserSetup.vdproj", "{77470D73-120A-4BAD-8CC2-0B680061C170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{F48554E5-C9C3-40D8-A3B6-99927A662F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F48554E5-C9C3-40D8-A3B6-99927A662F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F48554E5-C9C3-40D8-A3B6-99927A662F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77470D73-120A-4BAD-8CC2-0B680061C170}.Debug|Any CPU.ActiveCfg = Debug
+		{77470D73-120A-4BAD-8CC2-0B680061C170}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
