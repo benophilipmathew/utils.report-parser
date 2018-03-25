@@ -6,6 +6,7 @@
         Title="Dropzone" Height="250" Width="200"
         Style="{StaticResource MainWindowStyle}"
         WindowStartupLocation="CenterScreen"
+        ShowMaxRestoreButton="False"
         BorderThickness="{StaticResource MainWindowBorderThickness}">
     <Grid>
         <Grid.RowDefinitions>
