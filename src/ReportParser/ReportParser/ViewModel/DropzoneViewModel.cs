@@ -222,7 +222,6 @@ namespace ReportParser.ViewModel
                 int startRow = Constant.ExcelStartRow;
 
                 oXL.Visible = true;
-                oXL.UserControl = false;
 
                 if (this.dsData != null && this.dsData.Tables.Count >= 2)
                 {                    
@@ -253,9 +252,6 @@ namespace ReportParser.ViewModel
                         oSheet.Cells[(j + startRow), 6] = dsData.Tables[1].Rows[j]["Traffic"];
                         oSheet.Cells[(j + startRow), 7] = dsData.Tables[1].Rows[j]["TrafficPerc"];
                     }
-
-                    oXL.UserControl = false;
-                    oWB.Close();
                 }
             }
             catch (Exception ex)
